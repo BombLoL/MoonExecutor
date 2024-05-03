@@ -1,0 +1,473 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local MoonExec = Instance.new("ScreenGui")
+local TopBar = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Image = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local Main = Instance.new("Frame")
+local Script = Instance.new("TextBox")
+local Scripts = Instance.new("Frame")
+local pick = Instance.new("ScrollingFrame")
+local layout = Instance.new("UIListLayout")
+local Script1 = Instance.new("TextButton")
+local Script2 = Instance.new("TextButton")
+local Script3 = Instance.new("TextButton")
+local Script4 = Instance.new("TextButton")
+local Execute = Instance.new("TextButton")
+local Clear = Instance.new("TextButton")
+local AlwaysOnTop = Instance.new("TextButton")
+local Minimize = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+
+--Properties:
+
+MoonExec.Name = "MoonExec"
+MoonExec.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MoonExec.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+MoonExec.ResetOnSpawn = false
+
+TopBar.Name = "TopBar"
+TopBar.Parent = MoonExec
+TopBar.AnchorPoint = Vector2.new(0.5, 0.5)
+TopBar.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
+TopBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TopBar.BorderSizePixel = 0
+TopBar.Position = UDim2.new(0.49951598, 0, 0.204365075, 0)
+TopBar.Size = UDim2.new(0, 588, 0, 35)
+
+Title.Name = "Title"
+Title.Parent = TopBar
+Title.AnchorPoint = Vector2.new(0.5, 0.5)
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.328999996, 0, 0.5, 0)
+Title.Size = UDim2.new(0, 299, 0, 28)
+Title.Font = Enum.Font.Arial
+Title.Text = "Moon Executor"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+Image.Name = "Image"
+Image.Parent = TopBar
+Image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Image.BackgroundTransparency = 1.000
+Image.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Image.BorderSizePixel = 0
+Image.Position = UDim2.new(0.0102040814, 0, 0.0797047243, 0)
+Image.Size = UDim2.new(0, 32, 0, 29)
+Image.Image = "rbxassetid://17369483247"
+Image.ScaleType = Enum.ScaleType.Fit
+
+UICorner.CornerRadius = UDim.new(99, 0)
+UICorner.Parent = Image
+
+Main.Name = "Main"
+Main.Parent = TopBar
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.49951598, 0, 5.19007921, 0)
+Main.Size = UDim2.new(0, 588, 0, 294)
+
+Script.Name = "Script"
+Script.Parent = Main
+Script.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Script.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Script.BorderSizePixel = 0
+Script.Position = UDim2.new(0.0102040814, 0, 0.0340136066, 0)
+Script.Size = UDim2.new(0, 498, 0, 225)
+Script.ClearTextOnFocus = false
+Script.Font = Enum.Font.Arial
+Script.Text = ""
+Script.TextColor3 = Color3.fromRGB(255, 255, 255)
+Script.TextSize = 14.000
+Script.TextWrapped = true
+Script.TextXAlignment = Enum.TextXAlignment.Left
+Script.TextYAlignment = Enum.TextYAlignment.Top
+
+Scripts.Name = "Scripts"
+Scripts.Parent = Main
+Scripts.AnchorPoint = Vector2.new(0.5, 0.5)
+Scripts.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Scripts.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Scripts.BorderSizePixel = 0
+Scripts.Position = UDim2.new(0.926020384, 0, 0.416625887, 0)
+Scripts.Size = UDim2.new(0, 68, 0, 225)
+
+pick.Name = "pick"
+pick.Parent = Scripts
+pick.Active = true
+pick.AnchorPoint = Vector2.new(0.5, 0.5)
+pick.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pick.BackgroundTransparency = 1.000
+pick.BorderColor3 = Color3.fromRGB(0, 0, 0)
+pick.BorderSizePixel = 0
+pick.Position = UDim2.new(0.5, 0, 0.5, 0)
+pick.Size = UDim2.new(0, 68, 0, 225)
+pick.CanvasSize = UDim2.new(0, 0, 3, 0)
+pick.MidImage = "rbxassetid://0"
+pick.ScrollBarThickness = 0
+
+layout.Name = "layout"
+layout.Parent = pick
+layout.SortOrder = Enum.SortOrder.LayoutOrder
+
+Script1.Name = "Script1"
+Script1.Parent = pick
+Script1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Script1.BackgroundTransparency = 1.000
+Script1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Script1.BorderSizePixel = 0
+Script1.Size = UDim2.new(0, 68, 0, 24)
+Script1.Font = Enum.Font.Arial
+Script1.Text = "Headless.lua"
+Script1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Script1.TextScaled = true
+Script1.TextSize = 14.000
+Script1.TextWrapped = true
+
+Script2.Name = "Script2"
+Script2.Parent = pick
+Script2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Script2.BackgroundTransparency = 1.000
+Script2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Script2.BorderSizePixel = 0
+Script2.Size = UDim2.new(0, 68, 0, 24)
+Script2.Font = Enum.Font.Arial
+Script2.Text = "InfYield.lua"
+Script2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Script2.TextScaled = true
+Script2.TextSize = 14.000
+Script2.TextWrapped = true
+
+Script3.Name = "Script3"
+Script3.Parent = pick
+Script3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Script3.BackgroundTransparency = 1.000
+Script3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Script3.BorderSizePixel = 0
+Script3.Size = UDim2.new(0, 68, 0, 24)
+Script3.Font = Enum.Font.Arial
+Script3.Text = "DarkDex.lua"
+Script3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Script3.TextScaled = true
+Script3.TextSize = 14.000
+Script3.TextWrapped = true
+
+Script4.Name = "Script4"
+Script4.Parent = pick
+Script4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Script4.BackgroundTransparency = 1.000
+Script4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Script4.BorderSizePixel = 0
+Script4.Size = UDim2.new(0, 68, 0, 24)
+Script4.Font = Enum.Font.Arial
+Script4.Text = "Noclip.lua"
+Script4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Script4.TextScaled = true
+Script4.TextSize = 14.000
+Script4.TextWrapped = true
+
+Execute.Name = "Execute"
+Execute.Parent = Main
+Execute.AnchorPoint = Vector2.new(0.5, 0.5)
+Execute.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.0918367356, 0, 0.884353757, 0)
+Execute.Size = UDim2.new(0, 96, 0, 32)
+Execute.Font = Enum.Font.Arial
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextScaled = true
+Execute.TextSize = 14.000
+Execute.TextWrapped = true
+
+Clear.Name = "Clear"
+Clear.Parent = Main
+Clear.AnchorPoint = Vector2.new(0.5, 0.5)
+Clear.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.295918375, 0, 0.884353757, 0)
+Clear.Size = UDim2.new(0, 96, 0, 32)
+Clear.Font = Enum.Font.Arial
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextScaled = true
+Clear.TextSize = 14.000
+Clear.TextWrapped = true
+
+AlwaysOnTop.Name = "AlwaysOnTop"
+AlwaysOnTop.Parent = Main
+AlwaysOnTop.AnchorPoint = Vector2.new(0.5, 0.5)
+AlwaysOnTop.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AlwaysOnTop.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AlwaysOnTop.BorderSizePixel = 0
+AlwaysOnTop.Position = UDim2.new(0.849914968, 0, 0.884353757, 0)
+AlwaysOnTop.Size = UDim2.new(0, 156, 0, 32)
+AlwaysOnTop.Font = Enum.Font.Arial
+AlwaysOnTop.Text = "Always On Top: False"
+AlwaysOnTop.TextColor3 = Color3.fromRGB(255, 255, 255)
+AlwaysOnTop.TextScaled = true
+AlwaysOnTop.TextSize = 14.000
+AlwaysOnTop.TextWrapped = true
+
+Minimize.Name = "Minimize"
+Minimize.Parent = TopBar
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.BorderSizePixel = 0
+Minimize.Position = UDim2.new(0.852040827, 0, 0.142857149, 0)
+Minimize.Size = UDim2.new(0, 38, 0, 24)
+Minimize.Font = Enum.Font.Arial
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextScaled = true
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
+
+Close.Name = "Close"
+Close.Parent = TopBar
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.916666687, 0, 0.200000003, 0)
+Close.Size = UDim2.new(0, 38, 0, 24)
+Close.Font = Enum.Font.Arial
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+-- Scripts:
+
+local function LUVGTZ_fake_script() -- Script1.lol 
+	local script = Instance.new('LocalScript', Script1)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local executorBox = script.Parent.Parent.Parent.Parent.Script
+		
+		executorBox.Text = "--MoonExecutor - Headless Script--\nlocal char = game.Players.LocalPlayer.Character\nlocal head = char.Head\nlocal face = head.face\nhead.Transparency = 1\nface.ImageTransparency = 1"
+	end)
+end
+coroutine.wrap(LUVGTZ_fake_script)()
+local function GCCR_fake_script() -- Script2.lol 
+	local script = Instance.new('LocalScript', Script2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local executorBox = script.Parent.Parent.Parent.Parent.Script
+		
+		executorBox.Text = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source\"))()"
+	end)
+end
+coroutine.wrap(GCCR_fake_script)()
+local function WBXUFIK_fake_script() -- Script3.lol 
+	local script = Instance.new('LocalScript', Script3)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local executorBox = script.Parent.Parent.Parent.Parent.Script
+		
+		executorBox.Text = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua\", true))()"
+	end)
+end
+coroutine.wrap(WBXUFIK_fake_script)()
+local function JNFEG_fake_script() -- Script4.lol 
+	local script = Instance.new('LocalScript', Script4)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local executorBox = script.Parent.Parent.Parent.Parent.Script
+		
+		executorBox.Text = "--credits to bomblol--\n\nloadstring(\"game:HttpGet(https://raw.githubusercontent.com/BombLoL/Noclip/main/noclip.lua\"))()"
+	end)
+end
+coroutine.wrap(JNFEG_fake_script)()
+local function QUVAI_fake_script() -- Execute.Execute 
+	local script = Instance.new('LocalScript', Execute)
+
+	function chunkName()
+		-- Original: Infinite Yield
+		-- Modded: Moon Executor
+	
+		local length = math.random(10,20)
+		local array = {}
+		for i = 1, length do
+			array[i] = string.char(math.random(29, 159))
+		end
+		return table.concat(array)
+	end
+	
+	local executeBox = script.Parent.Parent.Script
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(executeBox.Text, chunkName())
+	end)
+end
+coroutine.wrap(QUVAI_fake_script)()
+local function EVWU_fake_script() -- Clear.Clear 
+	local script = Instance.new('LocalScript', Clear)
+
+	local executeBox = script.Parent.Parent.Script
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		executeBox.Text = ""
+	end)
+end
+coroutine.wrap(EVWU_fake_script)()
+local function NKWXIYM_fake_script() -- AlwaysOnTop.AOT 
+	local script = Instance.new('LocalScript', AlwaysOnTop)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local function checkCoreGui()
+			if game.CoreGui == nil then
+				return 0
+			else
+				return 1
+			end
+		end
+		
+		if checkCoreGui() == 0 then
+			game:GetService("StarterGui"):SetCore("SendNotification",{
+				Title = "Moon Executor";
+				Text = "CoreGui Can't be accessed, make sure your executor can access the CoreGui.";
+				Duration = math.huge;
+				Button1 = "OK"
+			})
+		elseif checkCoreGui() == 1 then
+			local mainFrame = script.Parent.Parent.Parent.Parent
+			if mainFrame.Parent == game.Players.LocalPlayer.PlayerGui then
+				mainFrame.Parent = game.CoreGui
+				script.Parent.Text = "Always On Top: True"
+			else
+				mainFrame.Parent = game.Players.LocalPlayer.PlayerGui
+				script.Parent.Text = "Always On Top: False"
+			end
+		end
+	end)
+end
+coroutine.wrap(NKWXIYM_fake_script)()
+local function AAYMOFG_fake_script() -- TopBar.Dragging 
+	local script = Instance.new('LocalScript', TopBar)
+
+	function dragGUI(gui)
+		local TweenService = game:GetService("TweenService")
+		local UserInputService = game:GetService("UserInputService")
+		
+		task.spawn(function()
+			local dragging
+			local dragInput
+			local dragStart = Vector3.new(0,0,0)
+			local startPos
+			local function update(input)
+				local delta = input.Position - dragStart
+				local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+				TweenService:Create(gui, TweenInfo.new(.20), {Position = Position}):Play()
+			end
+			gui.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+					dragging = true
+					dragStart = input.Position
+					startPos = gui.Position
+	
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then
+							dragging = false
+						end
+					end)
+				end
+			end)
+			gui.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+					dragInput = input
+				end
+			end)
+			UserInputService.InputChanged:Connect(function(input)
+				if input == dragInput and dragging then
+					update(input)
+				end
+			end)
+		end)
+	end
+	
+	dragGUI(script.Parent)
+end
+coroutine.wrap(AAYMOFG_fake_script)()
+local function RPCDYV_fake_script() -- Minimize.Min 
+	local script = Instance.new('LocalScript', Minimize)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local main = script.Parent.Parent.Main
+		
+		if main.Visible == true then
+			main.Visible = false
+		else
+			main.Visible = true
+		end
+	end)
+end
+coroutine.wrap(RPCDYV_fake_script)()
+local function CUPQCYG_fake_script() -- Close.Close 
+	local script = Instance.new('LocalScript', Close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local exec = script.Parent.Parent.Parent
+		exec:Destroy()
+	end)
+end
+coroutine.wrap(CUPQCYG_fake_script)()
+local function PBXSB_fake_script() -- MoonExec.Bypasser 
+	local script = Instance.new('LocalScript', MoonExec)
+
+	function randomString()
+		-- Original: Infinite Yield
+		-- Modded: Moon Executor
+		
+		local length = math.random(10,20)
+		local array = {}
+		for i = 1, length do
+			array[i] = string.char(math.random(29, 159))
+		end
+		return table.concat(array)
+	end
+	
+	script.Parent.Name = randomString()
+	script.Name = randomString()
+end
+coroutine.wrap(PBXSB_fake_script)()
+local function EIWME_fake_script() -- MoonExec.Loadstring 
+	local script = Instance.new('Script', MoonExec)
+
+	local serverscript = game.ServerScriptService
+	
+	function checkLoadstring()
+		if serverscript.LoadstringEnabled == false then
+			return 0
+		else
+			return 1
+		end
+	end
+	
+	if checkLoadstring() == 0 then
+		game:GetService("StarterGui"):SetCore("SendNotification",{
+			Title = "Moon Executor",
+			Text = "Loadstring isn't enabled in this game, some scripts will not work.",
+			Duration = math.huge,
+			Button1 = "Ok",
+		})
+	end
+end
+coroutine.wrap(EIWME_fake_script)()
