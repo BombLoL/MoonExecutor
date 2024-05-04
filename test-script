@@ -314,7 +314,7 @@ local function QUVAI_fake_script() -- Execute.Execute
 	local executeBox = script.Parent.Parent.Script
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(executeBox.Text, chunkName())
+		loadstring(executeBox.Text)
 	end)
 end
 coroutine.wrap(QUVAI_fake_script)()
