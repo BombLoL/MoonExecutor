@@ -1,5 +1,6 @@
 --Fixed everything
 --Also it works with solara, so idk.
+--Press K to hide Moon.
 
 local MoonExec = Instance.new("ScreenGui")
 local TopBar = Instance.new("Frame")
