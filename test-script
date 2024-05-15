@@ -63,8 +63,7 @@ local Minimize_2 = Instance.new("TextButton")
 --Properties:
 
 MoonExec.Name = "MoonExec"
-MoonExec.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-MoonExec.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+MoonExec.Parent = game:GetService("CoreGui")
 MoonExec.ResetOnSpawn = false
 
 TopBar.Name = "TopBar"
