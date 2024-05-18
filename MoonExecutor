@@ -1,7 +1,11 @@
---Fixed everything
---Also it works with solara, so idk.
---Press K to hide Moon.
+_______________________________________________________________________________________
+--> Hi, so i can't obfusecate the file cuz MoonSec V3 isn't letting me obfusecate it. |
+--> So, for now, it'll be un-obfusecated.					      |
+--------------------------------------------------------------------------------------|
 
+
+
+--> UI's/Gui's
 local MoonExec = Instance.new("ScreenGui")
 local TopBar = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
@@ -764,9 +768,9 @@ Minimize_2.TextScaled = true
 Minimize_2.TextSize = 14.000
 Minimize_2.TextWrapped = true
 
--- Scripts:
+--> Functions
 
-local function ERKVY_fake_script() -- Script1.lol 
+function script1() -- Script1.lol 
 	local script = Instance.new('LocalScript', Script1)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -775,8 +779,8 @@ local function ERKVY_fake_script() -- Script1.lol
 		executorBox.Text = "local char = game.Players.LocalPlayer.Character\nlocal head = char.Head\nlocal face = head.face\nhead.Transparency = 1\nface.Transparency = 1"
 	end)
 end
-coroutine.wrap(ERKVY_fake_script)()
-local function CKVGW_fake_script() -- Script2.lol 
+script1()
+function Script2() -- Script2.lol 
 	local script = Instance.new('LocalScript', Script2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -785,8 +789,8 @@ local function CKVGW_fake_script() -- Script2.lol
 		executorBox.Text = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source\"))()"
 	end)
 end
-coroutine.wrap(CKVGW_fake_script)()
-local function NZAYXVV_fake_script() -- Script3.lol 
+Script2()
+function Script3() -- Script3.lol 
 	local script = Instance.new('LocalScript', Script3)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -795,8 +799,8 @@ local function NZAYXVV_fake_script() -- Script3.lol
 		executorBox.Text = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua\", true))()"
 	end)
 end
-coroutine.wrap(NZAYXVV_fake_script)()
-local function CUSWIJD_fake_script() -- Script4.lol 
+Script3()
+function Script4() -- Script4.lol 
 	local script = Instance.new('LocalScript', Script4)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -805,8 +809,8 @@ local function CUSWIJD_fake_script() -- Script4.lol
 		executorBox.Text = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/BombLoL/Noclip/main/noclip.lua\"))()"
 	end)
 end
-coroutine.wrap(CUSWIJD_fake_script)()
-local function OMDLI_fake_script() -- Script5.lol 
+Script4()
+function Script5() -- Script5.lol 
 	local script = Instance.new('LocalScript', Script5)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -815,8 +819,8 @@ local function OMDLI_fake_script() -- Script5.lol
 		executorBox.Text = "--credits to exunys--\n\nloadstring(game:HttpGet(\"https://raw.githubusercontent.com/Exunys/ESP-Script/main/ESP.lua\"))()"
 	end)
 end
-coroutine.wrap(OMDLI_fake_script)()
-local function XJCV_fake_script() -- Script6.lol 
+Script5()
+function Script6() -- Script6.lol 
 	local script = Instance.new('LocalScript', Script6)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -825,13 +829,13 @@ local function XJCV_fake_script() -- Script6.lol
 		executorBox.Text = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/BombLoL/chat-bypasser-v2/main/chat-bypasser-v2.lua\"))()"
 	end)
 end
-coroutine.wrap(XJCV_fake_script)()
-local function SQXJO_fake_script() -- Execute.Execute 
+Script6()
+function Execute() -- Execute.Execute 
 	local script = Instance.new('LocalScript', Execute)
 	
 	local rs = game:GetService("RunService")
 	
-	local function randString()
+	function randString()
 		local length = math.random(10,20)
 		local array = {}
 		for i = 1, length do
@@ -845,7 +849,7 @@ local function SQXJO_fake_script() -- Execute.Execute
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if rs:IsStudio() then
-			local function qNzW4p()
+			function qNzW4p()
 				local script = Instance.new("LocalScript", game:WaitForChild("CoreGui"))
 				script.Name = randString()
 	
@@ -856,7 +860,7 @@ local function SQXJO_fake_script() -- Execute.Execute
 	
 			qNzW4p()
 		else
-			local function qNzW4p()
+			function qNzW4p()
 				local script = Instance.new("LocalScript", game:WaitForChild("CoreGui"))
 				script.Name = randString()
 	
@@ -869,8 +873,8 @@ local function SQXJO_fake_script() -- Execute.Execute
 		end
 	end)
 end
-coroutine.wrap(SQXJO_fake_script)()
-local function KUWBLK_fake_script() -- Clear.Clear 
+Execute()
+function Clear() -- Clear.Clear 
 	local script = Instance.new('LocalScript', Clear)
 
 	local executeBox = script.Parent.Parent.Script
@@ -879,8 +883,8 @@ local function KUWBLK_fake_script() -- Clear.Clear
 		executeBox.Text = ""
 	end)
 end
-coroutine.wrap(KUWBLK_fake_script)()
-local function WWCMQ_fake_script() -- Minimize.Min 
+Clear()
+function Minimize1() -- Minimize.Min 
 	local script = Instance.new('LocalScript', Minimize)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -893,8 +897,8 @@ local function WWCMQ_fake_script() -- Minimize.Min
 		end
 	end)
 end
-coroutine.wrap(WWCMQ_fake_script)()
-local function ENJWJ_fake_script() -- Close.Close 
+Minimize1()
+function Close1() -- Close.Close 
 	local script = Instance.new('LocalScript', Close)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -902,8 +906,8 @@ local function ENJWJ_fake_script() -- Close.Close
 		exec:Destroy()
 	end)
 end
-coroutine.wrap(ENJWJ_fake_script)()
-local function XLUKIZ_fake_script() -- TopBar.Hide 
+Close1()
+function Hide() -- TopBar.Hide 
 	local script = Instance.new('LocalScript', TopBar)
 
 	local uis = game:GetService("UserInputService")
@@ -941,8 +945,8 @@ local function XLUKIZ_fake_script() -- TopBar.Hide
 		end)
 	end
 end
-coroutine.wrap(XLUKIZ_fake_script)()
-local function QAXVGWU_fake_script() -- TopBar.Dragging 
+Hide()
+function DragScript1() -- TopBar.Dragging 
 	local script = Instance.new('LocalScript', TopBar)
 
 	local function dragGUI(gui)
@@ -954,7 +958,7 @@ local function QAXVGWU_fake_script() -- TopBar.Dragging
 			local dragInput
 			local dragStart = Vector3.new(0,0,0)
 			local startPos
-			local function update(input)
+			function update(input)
 				local delta = input.Position - dragStart
 				local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 				TweenService:Create(gui, TweenInfo.new(.20), {Position = Position}):Play()
@@ -987,11 +991,11 @@ local function QAXVGWU_fake_script() -- TopBar.Dragging
 	
 	dragGUI(script.Parent)
 end
-coroutine.wrap(QAXVGWU_fake_script)()
-local function PJYBPVI_fake_script() -- MoonExec.Bypasser 
+DragScript1()
+function Bypass() -- MoonExec.Bypasser 
 	local script = Instance.new('LocalScript', MoonExec)
 
-	local function randomString()
+	function randomString()
 		-- Original: Infinite Yield
 		-- Modded: Moon Executor
 		
@@ -1017,25 +1021,8 @@ local function PJYBPVI_fake_script() -- MoonExec.Bypasser
 		script.Parent.Parent = game:GetService("CoreGui")
 	end
 end
-coroutine.wrap(PJYBPVI_fake_script)()
-local function VQASIZF_fake_script() -- MoonExec.MobileSupport 
-	local script = Instance.new('LocalScript', MoonExec)
-
-	local uis = game:GetService("UserInputService")
-	
-	if uis.TouchEnabled then
-		local gui = game:GetService("StarterGui")
-	
-		gui:SetCore("SendNotification", {
-			Title = "[📱] Moon Executor | Mobile Support";
-			Text = "I Finally added mobile support, click the button ontop to hide Moon.";
-			Duration = math.huge;
-			Button1 = "Ok";
-		})
-	end
-end
-coroutine.wrap(VQASIZF_fake_script)()
-local function PVPBM_fake_script() -- Key_2.Check 
+Bypass()
+function NewKey() -- Key_2.Check 
 	local script = Instance.new('LocalScript', Key_2)
 
 	--> Services/Key
@@ -1079,16 +1066,16 @@ local function PVPBM_fake_script() -- Key_2.Check
 		end
 	end)
 end
-coroutine.wrap(PVPBM_fake_script)()
-local function CHIAMPF_fake_script() -- User.Change 
+NewKey()
+function Change() -- User.Change 
 	local script = Instance.new('LocalScript', User)
 
 	local text = script.Parent
 	
 	text.Text = "C:\\Users\\"..game.Players.LocalPlayer.DisplayName..">"
 end
-coroutine.wrap(CHIAMPF_fake_script)()
-local function XMJCR_fake_script() -- Close_2.Close 
+Change()
+function Close2() -- Close_2.Close 
 	local script = Instance.new('LocalScript', Close_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1096,8 +1083,8 @@ local function XMJCR_fake_script() -- Close_2.Close
 		exec:Destroy()
 	end)
 end
-coroutine.wrap(XMJCR_fake_script)()
-local function IGPRCNA_fake_script() -- Minimize_2.Min 
+Close2()
+function Minimize2() -- Minimize_2.Min 
 	local script = Instance.new('LocalScript', Minimize_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1110,8 +1097,8 @@ local function IGPRCNA_fake_script() -- Minimize_2.Min
 		end
 	end)
 end
-coroutine.wrap(IGPRCNA_fake_script)()
-local function JBKVO_fake_script() -- Key.Dragging 
+Minimize2()
+function DragScript2() -- Key.Dragging 
 	local script = Instance.new('LocalScript', Key)
 
 	local function dragGUI(gui)
@@ -1123,7 +1110,7 @@ local function JBKVO_fake_script() -- Key.Dragging
 			local dragInput
 			local dragStart = Vector3.new(0,0,0)
 			local startPos
-			local function update(input)
+			function update(input)
 				local delta = input.Position - dragStart
 				local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 				TweenService:Create(gui, TweenInfo.new(.20), {Position = Position}):Play()
@@ -1156,4 +1143,4 @@ local function JBKVO_fake_script() -- Key.Dragging
 	
 	dragGUI(script.Parent)
 end
-coroutine.wrap(JBKVO_fake_script)()
+DragScript2()
