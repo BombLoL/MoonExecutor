@@ -775,7 +775,7 @@ function script1() -- Script1.lol
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local executorBox = script.Parent.Parent.Parent.Parent.Script
-		
+
 		executorBox.Text = "local char = game.Players.LocalPlayer.Character\nlocal head = char.Head\nlocal face = head.face\nhead.Transparency = 1\nface.Transparency = 1"
 	end)
 end
@@ -785,7 +785,7 @@ function Script2() -- Script2.lol
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local executorBox = script.Parent.Parent.Parent.Parent.Script
-		
+
 		executorBox.Text = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source\"))()"
 	end)
 end
@@ -795,7 +795,7 @@ function Script3() -- Script3.lol
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local executorBox = script.Parent.Parent.Parent.Parent.Script
-		
+
 		executorBox.Text = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua\", true))()"
 	end)
 end
@@ -805,7 +805,7 @@ function Script4() -- Script4.lol
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local executorBox = script.Parent.Parent.Parent.Parent.Script
-		
+
 		executorBox.Text = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/BombLoL/Noclip/main/noclip.lua\"))()"
 	end)
 end
@@ -815,7 +815,7 @@ function Script5() -- Script5.lol
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local executorBox = script.Parent.Parent.Parent.Parent.Script
-		
+
 		executorBox.Text = "--credits to exunys--\n\nloadstring(game:HttpGet(\"https://raw.githubusercontent.com/Exunys/ESP-Script/main/ESP.lua\"))()"
 	end)
 end
@@ -825,17 +825,17 @@ function Script6() -- Script6.lol
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local executorBox = script.Parent.Parent.Parent.Parent.Script
-		
+
 		executorBox.Text = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/BombLoL/chat-bypasser-v2/main/chat-bypasser-v2.lua\"))()"
 	end)
 end
 Script6()
 function Execute() -- Execute.Execute 
 	local script = Instance.new('LocalScript', Execute)
-	
+
 	local rs = game:GetService("RunService")
-	
-	function randString()
+
+	local function randString()
 		local length = math.random(10,20)
 		local array = {}
 		for i = 1, length do
@@ -843,32 +843,32 @@ function Execute() -- Execute.Execute
 		end
 		return table.concat(array)
 	end
-	
-	
+
+
 	local executeBox = script.Parent.Parent.Script
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if rs:IsStudio() then
-			function qNzW4p()
+			local function qNzW4p()
 				local script = Instance.new("LocalScript", game:WaitForChild("CoreGui"))
 				script.Name = randString()
-	
+
 				loadstring(executeBox.Text)()
 				wait(5)
 				script:Destroy()
 			end
-	
+
 			qNzW4p()
 		else
-			function qNzW4p()
+			local function qNzW4p()
 				local script = Instance.new("LocalScript", game:WaitForChild("CoreGui"))
 				script.Name = randString()
-	
+
 				loadstring(executeBox.Text, randString())()
 				wait(5)
 				script:Destroy()
 			end
-	
+
 			qNzW4p()
 		end
 	end)
@@ -878,7 +878,7 @@ function Clear() -- Clear.Clear
 	local script = Instance.new('LocalScript', Clear)
 
 	local executeBox = script.Parent.Parent.Script
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		executeBox.Text = ""
 	end)
@@ -889,7 +889,7 @@ function Minimize1() -- Minimize.Min
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local main = script.Parent.Parent.Main
-		
+
 		if main.Visible == true then
 			main.Visible = false
 		else
@@ -911,7 +911,7 @@ function Hide() -- TopBar.Hide
 	local script = Instance.new('LocalScript', TopBar)
 
 	local uis = game:GetService("UserInputService")
-	
+
 	if uis.MouseEnabled then
 		uis.InputBegan:Connect(function(input, gpe)
 			if gpe then return end
@@ -920,7 +920,7 @@ function Hide() -- TopBar.Hide
 					script.Parent.Visible = true
 				else
 					local gui = game:GetService("StarterGui")
-	
+
 					gui:SetCore("SendNotification", {
 						Title = "[❓] Moon Executor | Unhide";
 						Text = "Press \"K\" to unhide Moon.";
@@ -932,7 +932,7 @@ function Hide() -- TopBar.Hide
 			end
 		end)
 	end
-	
+
 	if uis.TouchEnabled then
 		local hidebtn = script.Parent.Parent.Hide
 		hidebtn.Visible = true
@@ -952,7 +952,7 @@ function DragScript1() -- TopBar.Dragging
 	local function dragGUI(gui)
 		local TweenService = game:GetService("TweenService")
 		local UserInputService = game:GetService("UserInputService")
-		
+
 		task.spawn(function()
 			local dragging
 			local dragInput
@@ -968,7 +968,7 @@ function DragScript1() -- TopBar.Dragging
 					dragging = true
 					dragStart = input.Position
 					startPos = gui.Position
-	
+
 					input.Changed:Connect(function()
 						if input.UserInputState == Enum.UserInputState.End then
 							dragging = false
@@ -988,17 +988,17 @@ function DragScript1() -- TopBar.Dragging
 			end)
 		end)
 	end
-	
+
 	dragGUI(script.Parent)
 end
 DragScript1()
 function Bypass() -- MoonExec.Bypasser 
 	local script = Instance.new('LocalScript', MoonExec)
 
-	function randomString()
+	local function randomString()
 		-- Original: Infinite Yield
 		-- Modded: Moon Executor
-		
+
 		local length = math.random(5,20)
 		local array = {}
 		for i = 1, length do
@@ -1006,15 +1006,15 @@ function Bypass() -- MoonExec.Bypasser
 		end
 		return table.concat(array)
 	end
-	
+
 	while task.wait(1) do
 		script.Parent.Name = randomString()
 		script.Name = randomString()
 		--warn(script.Parent.Name and script.Name)
 	end
-	
+
 	local RunService = game:GetService("RunService")
-	
+
 	if RunService:IsStudio() then
 		script.Parent.Parent = game.Players.LocalPlayer.PlayerGui
 	elseif RunService:IsClient() then
@@ -1071,7 +1071,7 @@ function Change() -- User.Change
 	local script = Instance.new('LocalScript', User)
 
 	local text = script.Parent
-	
+
 	text.Text = "C:\\Users\\"..game.Players.LocalPlayer.DisplayName..">"
 end
 Change()
@@ -1089,7 +1089,7 @@ function Minimize2() -- Minimize_2.Min
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local main = script.Parent.Parent.cmdf
-		
+
 		if main.Visible == true then
 			main.Visible = false
 		else
@@ -1104,7 +1104,7 @@ function DragScript2() -- Key.Dragging
 	local function dragGUI(gui)
 		local TweenService = game:GetService("TweenService")
 		local UserInputService = game:GetService("UserInputService")
-		
+
 		task.spawn(function()
 			local dragging
 			local dragInput
@@ -1120,7 +1120,7 @@ function DragScript2() -- Key.Dragging
 					dragging = true
 					dragStart = input.Position
 					startPos = gui.Position
-	
+
 					input.Changed:Connect(function()
 						if input.UserInputState == Enum.UserInputState.End then
 							dragging = false
@@ -1140,7 +1140,7 @@ function DragScript2() -- Key.Dragging
 			end)
 		end)
 	end
-	
+
 	dragGUI(script.Parent)
 end
 DragScript2()
