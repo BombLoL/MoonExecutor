@@ -71,8 +71,7 @@ local UIGradient_6 = Instance.new("UIGradient")
 --Properties:
 
 MoonExec.Name = "MoonExec"
-MoonExec.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-MoonExec.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+MoonExec.Parent = game.CoreGui
 MoonExec.ResetOnSpawn = false
 
 TopBar.Name = "TopBar"
